@@ -109,7 +109,7 @@ uint32_t millis()
    return TotalMillis ;
 }
 
-void delayMilliseconds(unsigned long ms)
+void delayMilliseconds(uint32_t ms)
 {
    uint16_t start = (uint16_t)micros();
    uint16_t lms = ms ;
@@ -125,7 +125,7 @@ void delayMilliseconds(unsigned long ms)
 /* Important notes:
 	- Max value is 16000µs
 	- delay is not accurate due to interrupts happening */
-void delayMicroseconds(unsigned int us)
+void delayMicroseconds(uint32_t us)
 {
    if (--us == 0)
       return;
